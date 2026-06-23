@@ -58,11 +58,12 @@ const projects = [
     stack: ["React", "Redux", "Tailwind CSS", "Node.js"],
   },
   {
-    name: "Full Stack Social Media App",
-    type: "Social Product",
+    name: "Habit Tracker ",
+    type: "Full Stack",
     summary:
-      "A scalable social app with profiles, feeds, interactions, media-friendly UI, and clean full stack application structure.",
+      "A full stack habit tracking app for managing routines, monitoring daily progress, and building consistent streaks with a clean dashboard experience.",
     stack: ["Next.js", "MongoDB", "Express", "React"],
+    demoUrl: "https://habit-flow-sand.vercel.app/",
   },
 ];
 
@@ -547,6 +548,11 @@ export default function Home() {
                     <span key={tech}>{tech}</span>
                   ))}
                 </div>
+                {project.demoUrl ? (
+                  <a className="project-demo-link" href={project.demoUrl} target="_blank" rel="noreferrer">
+                    Live Demo <ArrowUpRight size={18} />
+                  </a>
+                ) : null}
               </div>
               <div className="project-orb" />
             </motion.article>
